@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // This is a severe security risk. Anyone can copy and misuse your key.
     // This is ONLY for a very temporary, throwaway demonstration where you will
     // immediately revoke the key after use. For any real application, use a secure backend.
-    const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE"; // <--- REPLACE THIS WITH YOUR ACTUAL GEMINI API KEY
+    const GEMINI_API_KEY = "AIzaSyCTuEbrCmCyBIi0q2_mnXAyELL1WRlIOGA"; // <--- REPLACE THIS WITH YOUR ACTUAL GEMINI API KEY
 
     // Function to display messages (errors, success, etc.)
     function showMessage(message, type = 'error') {
