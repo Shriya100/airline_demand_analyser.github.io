@@ -1,0 +1,67 @@
+/* Custom CSS for Airline Demand Analyzer */
+
+/* Ensure the body uses the Inter font, if available, falling back to sans-serif */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Additional styling for the main container if needed, though Tailwind handles most */
+.container {
+    max-width: 1024px; /* Equivalent to max-w-4xl in Tailwind */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Specific styling for the button to add more flair */
+#generateDataBtn {
+    background: linear-gradient(to right, #3B82F6, #6366F1); /* Blue to Indigo gradient */
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#generateDataBtn:hover {
+    background: linear-gradient(to right, #2563EB, #4F46E5); /* Darker gradient on hover */
+}
+
+#generateDataBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition: all 0.75s ease-out;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+#generateDataBtn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Style for the message box close button for better clickability */
+#closeMessageBox {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#closeMessageBox:hover {
+    transform: scale(1.1);
+}
+
+/* Chart canvas responsiveness */
+canvas {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Ensure preformatted text wraps */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
